@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous" />
+
+        <style>
+            #troggleSPinner {
+                display: none;
+            }
+        </style>
+
+        <title>Meal db</title>
+    </head>
+    <body>
+        <h2 class="text-center">Search your favourite meal</h2>
+
+        <div class="input-group mb-3 w-50 mx-auto">
+            <input id="inputField" type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2" />
+            <button onclick="searchItem()" class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
+        </div>
+
+        <!-- spinner  -->
+        <h2 class="w-50 mx-auto" id="troggleSPinner">Loading ...</h2>
+        <!-- one page meal details  -->
+        <h3 id="searchResult"></h3>
+
+        <div id="mealDetails" class="w-50 mx-auto">
+            <!-- <div class="card">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div> -->
+        </div>
+
+        <!-- grid cards  -->
+        <div id="resultDiv" class="row row-cols-1 row-cols-md-3 g-4">
+            <!-- <div class="col"> -->
+            <!-- note : ei card dekhe idea niye js dynamic card korte hobe  -->
+            <!-- <div class="card">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+          </div> -->
+            <!-- </div> -->
+        </div>
+        <h3>Search for the result</h3>
+        <p id="errorMessage" class="w-50 mx-auto text-danger">Something went wrong ! Please search by text</p>
+        <p class="w-50 mx-auto pt-5" id="not-fount"></p>
+        <script src="mealdb.js"></script>
+        <!-- <script src="meaddbAsyn.js"></script> -->
+    </body>
+</html>
