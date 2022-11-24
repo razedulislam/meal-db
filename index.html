@@ -15,12 +15,15 @@
             #troggleSPinner {
                 display: none;
             }
+            #searchResult {
+                display: none;
+            }
         </style>
 
         <title>Meal db</title>
     </head>
     <body>
-        <h2 class="text-center">Search your favourite meal</h2>
+        <h2 class="text-center bg-warning p-2 w-50 mx-auto">Search your favourite meal</h2>
 
         <div class="input-group mb-3 w-50 mx-auto">
             <input id="inputField" type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2" />
@@ -30,7 +33,7 @@
         <!-- spinner  -->
         <h2 class="w-50 mx-auto" id="troggleSPinner">Loading ...</h2>
         <!-- one page meal details  -->
-        <h3 id="searchResult"></h3>
+        <h3 id="searchResult" class="text-danger"></h3>
 
         <div id="mealDetails" class="w-50 mx-auto">
             <!-- <div class="card">
@@ -56,8 +59,8 @@
           </div> -->
             <!-- </div> -->
         </div>
-        <h3>Search for the result</h3>
-        <p id="errorMessage" class="w-50 mx-auto text-danger">Something went wrong ! Please search by text</p>
+        <h3 id="searchForResult">Search for the result</h3>
+        <p id="errorMessage" class="w-50 mx-auto text-danger pt-5">Something went wrong ! Result not found</p>
         <p class="w-50 mx-auto pt-5" id="not-fount"></p>
         <script src="mealdb.js"></script>
         <!-- <script src="meaddbAsyn.js"></script> -->

@@ -4,6 +4,9 @@ const searchItem = () => {
     const inputValue = inputField.value;
     //loading start here
     troglesPinner("block");
+    //when loading searchitem display property is none
+    document.getElementById("searchResult").style.display = "none";
+    document.getElementById("searchForResult").style.display = "none";
     // resultDivRemove("none");
     // console.log(inputValue) ;
     inputField.value = "";
@@ -45,6 +48,7 @@ const loadMeal = (foods) => {
     // console.log(searchFood.length);
     let count = 0;
     for (const food of searchFood) {
+        //fount amount of food item by count++
         if (food) {
             count++;
         }
@@ -61,9 +65,11 @@ const loadMeal = (foods) => {
         `;
         resultDiv.appendChild(div);
     }
+
     const searchResult = document.getElementById("searchResult");
+    searchResult.style.display = "block";
     searchResult.innerHTML = `
-         ${count}
+        <h3> Result Found ${count}</h3> 
     `;
     console.log(count);
     troglesPinner("none");
